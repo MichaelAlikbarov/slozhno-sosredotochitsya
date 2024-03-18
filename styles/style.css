@@ -1,5 +1,341 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  background-color: var(--bg-color);
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto;
+  gap: 40px;
+  justify-content: center;
+  font-family: var(--main-font), sans-serif;
+  background-image: var(--bg-image);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.header {
+  display: grid;
+  margin: 10px;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(3, auto);
+  font-weight: 700;
+}
+
+.decorated-zone {
+  position: relative;
+}
+
+.decorated-zone::before,
+.decorated-zone::after {
+  inline-size: 25.04px;
+  block-size: 25px;
+  content: "";
+  border: 1px solid var(--accent-color);
+}
+
+.decorated-zone::before {
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-end: 0;
+  border-inline-start: transparent;
+  border-block-end: transparent;
+}
+
+.decorated-zone::after {
+  position: absolute;
+  inset-block-end: 0;
+  inset-inline-start: 0;
+  border-block-start: transparent;
+  border-inline-end: transparent;
+}
+
+.header__decorative-signature::before {
+  content: "REC";
+  inline-size: 33px;
+  block-size: 26px;
+  color: var(--accent-color);
+  font-weight: 400;
+  font-size: var(--base-fs);
+  line-height: 1.39;
+  text-align: center;
+  text-transform: uppercase;
+  position: absolute;
+  inset-inline-end: 28px;
+  inset-block-start: 0;
+}
+
+.header__decorative-signature::after {
+  position: absolute;
+  display: inline-block;
+  inset-inline-end: 10px;
+  inset-block-start: 8px;
+  content: "";
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+}
+
+.header__theme-menu {
+  margin-block-start: 65px;
+  margin-block-end: 65px;
+  justify-self: end;
+  color: var(--accent-color);
+}
+
+.header__theme-menu-list {
+  display: grid;
+  gap: 10px;
+}
+
+.header__theme-menu-button {
+  background-color: inherit;
+  text-transform: lowercase;
+  border: none;
+  inline-size: 70px;
+  block-size: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: 400;
+  font-size: var(--base-fs);
+  line-height: 1;
+  padding: 0;
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--accent-color);
+}
+
+.header__title {
+  color: #DB00FF;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: .825;
+  text-shadow: 4px 4px 0 var(--accent-color);
+  margin-block-end: 55px;
+}
+
+.header__subtitle {
+  font-size: var(--base-fs);
+  line-height: 1.3;
+  color: #000028;
+  background-color: var(--accent-color);
+  margin-block-end: 55px;
+  font-weight: 700;
+}
+
+.title-decor {
+  font-size: var(--base-fs);
+  line-height: 1.3;
+  color: #000028;
+  background-color: var(--accent-color);
+  font-weight: 700;
+}
+
+.main {
+  margin: 0;
+  display: grid;
+  gap: 50px;
+  margin-inline-start: 10px;
+  margin-inline-end: 10px;
+}
+
+.notes {
+  display: grid;
+  gap: 20px;
+}
+
+.notes__title {
+  color: var(--accent-color);
+  font-weight: 700;
+  font-size: var(--base-fs);
+  line-height: 1.3;
+}
+
+.notes__list {
+  display: grid;
+  gap: 20px;
+}
+
+.notes__item-title {
+  margin-block-end: 10px;
+}
+
+.notes__item-text {
+  font-weight: 400;
+  font-size: var(--base-fs);
+  line-height: 1.3;
+  color: #F1B2CE;
+}
+
+.notes__item-link {
+  text-decoration: none;
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+.images{
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: repeat(5, auto);
+  gap: 10px;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.footer {
+  min-height: 100vh;
+  margin: 10px;
+  display: grid;
+  grid-template-columns: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer__title {
+  color: #DB00FF;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: .825;
+  text-shadow: 2px 2px 0 var(--accent-color);
+  font-weight: 700;
+}
+
+@media(min-width: 768px) {
+  .page {
+    gap: 60px;
+  }
+
+  .header {
+    margin: 20px;
+  }
+  
+  .header__theme-menu {
+    margin-block-start: 172px;
+    margin-block-end: 173px;
+  }
+
+  .header__title {
+    margin-inline-start: -20px;
+    margin-block-end: 162px;
+  }
+
+  .header__subtitle {
+    max-width: 364px;
+    margin-inline-start: auto;
+    margin-inline-end: 0;
+    margin-block-end: 163px;
+  }
+
+  .main {
+    margin-inline-start: 20px;
+    margin-inline-end: 20px;
+    gap: 80px;
+  }
+
+  .notes {
+    grid-template-columns:  auto auto;
+    column-gap: 20px;
+  }
+
+  .notes__title {
+    max-width: 236px;
+  }
+
+  .notes_cards {
+    grid-template-columns: auto;
+    gap: 20px;
+  }
+
+  .notes:nth-child(3) .notes__list {
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+
+  .images {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .image__title {
+    grid-column: 1 / span 3;
+    grid-row: 1 / 2;
+  }
+
+  picture:nth-child(2) {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  picture:nth-child(3) {
+    grid-row-start: 2;
+    grid-row-end: 4;
+    grid-column-start: 3;
+    grid-column-end: 4;
+  }
+
+  picture:nth-child(4) {
+    grid-row-start: 3;
+    grid-row-end: 6;
+    grid-column-start: 1;
+    grid-column-end: 2;
+  }
+
+  picture:nth-child(6) {
+    grid-row-start: 4;
+    grid-row-end: 6;
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
+
+  .footer {
+    margin: 20px;
+  }
+}
+
+@media(min-width: 1024px) {
+  .header__theme-menu {
+    justify-self: center;
+    margin-block-start: 0;
+    margin-block-end: 273px;
+  }
+
+  .header__theme-menu-list {
+    grid-template-columns: auto auto auto;
+  }
+
+  .header__title {
+    font-size: 157px;
+    line-height: 129.53px;
+    margin-block-end: 114px;
+  }
+
+  .header__subtitle {
+    max-width: 491px;
+    margin-block-end: 114px;
+  }
+
+  .main {
+    gap: 80px;
+    margin-inline-start: 20px;
+    margin-inline-end: 20px;
+  }
+
+  .notes__title {
+    max-width: 314.96px;
+  }
+
+  .notes_cards .notes__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer__title {
+    font-size: 157px;
+  }
 }
