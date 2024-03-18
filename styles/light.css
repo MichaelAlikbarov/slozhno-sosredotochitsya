@@ -10,8 +10,5 @@
   --text-color: #FFC2E6;
   --main-font: IBM Plex mono;
   --bg-image: url("../images/cover-image-light.png");
-}
-
-.header__decorative-signature {
-  display: none;
+  --display-none: none;
 }

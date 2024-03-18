@@ -49,6 +49,9 @@
   border-inline-end: transparent;
 }
 
+.header__decorative-signature {
+  display: var(--display-none);
+}
 .header__decorative-signature::before {
   content: "REC";
   inline-size: 33px;
