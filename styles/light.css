@@ -11,4 +11,22 @@
   --main-font: IBM Plex mono;
   --bg-image: url("../images/cover-image-light.png");
   --display-none: none;
+  --logo-color: #FFC2E6;
+  --button-color: #353430;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-color: #FFF1F7;
+    --accent-color: #FF8DCB;
+    --text-color: #FFC2E6;
+    --main-font: IBM Plex mono; 
+    --display-none: none;
+    --logo-color: #FFC2E6;
+    --button-color: #353430;
+  }
+
+  .page {
+    --bg-image: url("../images/cover-image-light.png");
+  }
 }
