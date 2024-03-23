@@ -206,6 +206,10 @@
   row-gap: 20px;
 }
 
+.notes__advice .notes__item-title {
+  font-weight: 400;
+}
+
 .images{
   display: grid;
   grid-template-columns: auto;
