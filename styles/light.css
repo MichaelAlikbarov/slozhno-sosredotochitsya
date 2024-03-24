@@ -12,8 +12,10 @@
   --bg-image: url("../images/cover-image-light.png");
   --display-none: none;
   --logo-color: #FFC2E6;
-  --button-color: #353430;
+  --border-color: #353430;
   --main-title-color: #353430;
+  --title-color: #353430;
+  --border-hover: #32312D66;
 }
 
 @media (prefers-color-scheme: light) {
@@ -24,8 +26,10 @@
     --main-font: IBM Plex mono; 
     --display-none: none;
     --logo-color: #FFC2E6;
-    --button-color: #353430;
+    --border-color: #353430;
     --main-title-color: #353430;
+    --title-color: #353430;
+    --border-hover: #32312D66;
   }
 
   .page {

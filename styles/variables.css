@@ -10,8 +10,10 @@
   --indent: 10px;
   --logo-color: #DB00FF;
   --logo-shadow: #FF0070;
-  --button-color: #FF0070;
+  --border-color: #FF0070;
   --main-title-color: #FF0070;
+  --title-color: #000028;
+  --border-hover: #FF007066;
 }
 
 @media (width >= 768px) {

@@ -7,8 +7,10 @@
   --display-none: block;
   --logo-color: #DB00FF;
   --logo-shadow: #FF0070;
-  --button-color: #FF0070;
+  --border-color: #FF0070;
   --main-title-color: #FF0070;
+  --title-color: #000028;
+  --border-hover: #FF007066;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,8 +22,10 @@
     --display-none: block;
     --logo-color: #DB00FF;
     --logo-shadow: #FF0070;
-    --button-color: #FF0070;
+    --border-color: #FF0070;
     --main-title-color: #FF0070;
+    --title-color: #000028;
+    --border-hover: #FF007066;
   }
   .page {
     --bg-image: url("../images/cover-image-dark.png");
